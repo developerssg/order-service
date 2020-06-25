@@ -16,7 +16,12 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>mvn verify sonar:sonar
+
+		<sonar.projectKey>developerssg_order-service</sonar.projectKey>
+		<sonar.organization>developerssg-1</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login>4ba76a662d39471503e76fc6b8941f81ce159bba</sonar.login>
 	</properties>
 
 	<dependencies>
