@@ -1,0 +1,29 @@
+#Spring-Config
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_db
+    username: root
+    password: pass@word1
+    jpa:
+      show-sql: true
+
+#Server port declaration
+server:
+  port: 8002
+
+#Discovery-Config
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      ferIpAddress: true
+    serviceUrl:
+      defaultZone: http://localhost:5000/eureka
+    healthcheck:
+      enabled: true
+
+
+

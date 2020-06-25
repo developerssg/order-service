@@ -1,0 +1,27 @@
+
+#Spring-Config
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://${RDS_URL}/order_db
+    username: ${RDS_USERNAME}
+    password: ${RDS_PASSWORD}
+    jpa:
+      show-sql: true
+
+#Server port declaration
+server:
+  port: ${SERVER_PORT}
+
+#Discovery-Config
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      ferIpAddress: true
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL}
+    healthcheck:
+      enabled: true
